@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Skip Selection UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Better Information
+- Added bin bag estimates to give a practical sense of skip capacity (e.g., "30-40 bin bags")
+- Created an info button that shows a popup with the skip's exact measurements
+- Made warning messages about road placement and waste types more noticeable
 
-## Available Scripts
+### Easier Selection
+- Added a footer that shows your selected skip and stays visible while scrolling
+- Made selected items clearly stand out with blue highlighting
+- Built a layout that works well on both mobile and desktop screens
 
-In the project directory, you can run:
+### New Info Popup
+- Designed with a simple layout showing the skip's key measurements
+- Used clear labels and spacing to make dimensions easy to read
+- Made it smooth to open and close
+- Added the ability to close it with the Escape key
 
-### `npm start`
+## How I Built It
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I used React with Tailwind CSS for the design. The code is organized with:
+- Simple data loading through custom hooks
+- Helper functions for calculating prices and handling images
+- Components that can be easily reused and maintained
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+src/
+├── features/
+│   └── skips/
+│       └── components/
+│           ├── SkipCard.js         # Individual skip option card
+│           ├── SkipInfoModal.js    # Popup showing detailed measurements
+│           └── SelectedSkipBar.js  # Footer showing selected skip
+├── hooks/
+│   └── useSkipData.js              # Data loading logic
+├── pages/
+│   └── SkipSelectionPage.js        # Main page component
+├── utils/
+│   ├── skipDimensions.js           # Skip size specifications
+│   └── skipHelpers.js              # Helper functions for calculations
+├── styles/
+│   └── App.css                     # Global styles
+└── App.js                          # Application entry point
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project follows a feature-based structure where related components are grouped together. Shared utilities and hooks are separated for reusability.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
