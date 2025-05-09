@@ -24,8 +24,8 @@ const SelectedSkipBar = ({ selectedSkip, onContinue, onBack }) => {
       }`}
     >
       <div className="container mx-auto">
-        <div className="px-4 py-3.5 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+        <div className="px-4 py-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center space-x-4 mb-3 sm:mb-0">
             <div className="bg-[#002DA1]/20 rounded-lg p-1.5 overflow-hidden w-14 h-14 flex-shrink-0 flex items-center justify-center border border-[#002DA1]/30">
               <img 
                 src={getSkipImageSource(selectedSkip.size)}
@@ -46,10 +46,10 @@ const SelectedSkipBar = ({ selectedSkip, onContinue, onBack }) => {
             </div>
           </div>
           
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center justify-between sm:justify-end w-full sm:w-auto sm:space-x-3">
             <button 
               onClick={onBack}
-              className="px-5 py-2.5 bg-gray-800 border border-gray-600 rounded-lg text-gray-300 font-medium hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50"
+              className="px-4 sm:px-5 py-2.5 bg-gray-800 border border-gray-600 rounded-lg text-gray-300 font-medium hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 w-[48%] sm:w-auto"
               aria-label="Go back"
             >
               Back
@@ -57,7 +57,7 @@ const SelectedSkipBar = ({ selectedSkip, onContinue, onBack }) => {
             
             <button 
               onClick={onContinue}
-              className="px-6 py-2.5 bg-[#002DA1] hover:bg-[#002DA1]/80 text-white rounded-lg font-medium shadow-sm transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-[#002DA1] focus:ring-opacity-50"
+              className="px-4 sm:px-6 py-2.5 bg-[#002DA1] hover:bg-[#002DA1]/80 text-white rounded-lg font-medium shadow-sm transition-colors flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#002DA1] focus:ring-opacity-50 w-[48%] sm:w-auto"
               aria-label="Continue with selected skip"
             >
               Continue
