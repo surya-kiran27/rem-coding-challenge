@@ -54,7 +54,7 @@ const SkipInfoModal = ({ skip, onClose }) => {
   const binBags = dimensions?.binBags || "N/A";
   
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 p-4">
+    <div className="fixed inset-0 flex items-center justify-center z-[60] bg-black bg-opacity-80 p-4">
       <div 
         ref={modalRef}
         className="bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md mx-auto max-h-[90vh] overflow-y-auto"
