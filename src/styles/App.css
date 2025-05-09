@@ -1,0 +1,27 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skip-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s;
+  }
+}
+
+/* Add space at the bottom of the page for fixed bar */
+.pb-for-fixed-bar {
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0));
+}
+
+/* Ensure the fixed bar respects the safe area on mobile devices */
+.fixed-bar {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Smooth transitions for elements */
+.smooth-transition {
+  transition: all 0.3s ease-out;
+}
