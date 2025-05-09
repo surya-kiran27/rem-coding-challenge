@@ -1,5 +1,22 @@
 # Skip Selection UI
 
+## Getting Started
+
+To run this project locally:
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm start
+   ```
+4. Open your browser to [http://localhost:3000](http://localhost:3000)
+
+## Features
+
 ### Better Information
 - Added bin bag estimates to give a practical sense of skip capacity (e.g., "30-40 bin bags")
 - Created an info button that shows a popup with the skip's exact measurements
